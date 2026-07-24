@@ -1,0 +1,19 @@
+n = int(input("Enter the length of Fibonacci sequence (N): "))
+
+a, b = 0, 1
+count = 0
+
+if n <= 0:
+    print("Please enter a positive integer.")
+elif n == 1:
+    print(f"Fibonacci sequence up to {n}: [0]")
+else:
+    print("Fibonacci sequence:")
+    while count < n:
+        print(a, end=" ")
+        nth = a + b
+        
+        a = b
+        b = nth
+        count += 1
+    print() 
