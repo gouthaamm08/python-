@@ -1,0 +1,19 @@
+import math
+
+n = int(input("Enter how many numbers you want to input: "))
+numbers = []
+
+for i in range(n):
+    num = float(input(f"Enter element {i+1}: "))
+    numbers.append(num)
+
+mean = sum(numbers) / n
+
+variance_sum = sum((x - mean) ** 2 for x in numbers)
+variance = variance_sum / n
+std_deviation = math.sqrt(variance)
+
+print(f"\nCollected List: {numbers}")
+print(f"Mean: {mean:.2f}")
+print(f"Variance: {variance:.2f}")
+print(f"Standard Deviation: {std_deviation:.2f}")
