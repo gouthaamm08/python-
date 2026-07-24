@@ -1,0 +1,11 @@
+digit_string = input("Enter a multi-digit number: ")
+
+frequency_dict = {}
+
+for digit in digit_string:
+    if digit.isdigit():  # Ensures we only count numerical characters
+        frequency_dict[digit] = frequency_dict.get(digit, 0) + 1
+
+print("\nDigit Frequencies:")
+for key, val in sorted(frequency_dict.items()):
+    print(f"Digit '{key}' appears: {val} time(s)")
