@@ -1,0 +1,10 @@
+import datetime
+name = input("Enter your name: ")
+birth_year = int(input("Enter your year of birth: "))
+current_year = datetime.datetime.now().year
+age = current_year - birth_year
+print(f"Age of {name} is {age} years.")
+if age >= 60:
+    print(f"{name} is a Senior Citizen.")
+else:
+    print(f"{name} is not a Senior Citizen.")
